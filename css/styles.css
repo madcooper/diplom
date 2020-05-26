@@ -71,6 +71,12 @@ body {
   margin-top: calc(55vw - 57px);
 }
 
+.divider {
+  background: rgba(0, 0, 0, .8);
+  display: flex;
+  height: 57px;
+}
+
 @media screen and (max-width: 1500px) {
   .logo-img {
     width: 60px;
@@ -125,8 +131,8 @@ body {
   display: flex;
   min-height: 100vh;
 
-  --gradient: linear-gradient(to left, rgb(181, 39, 250) 0%, rgb(52, 210, 251) 83%, transparent 100%);
-  --gradient-vertical: linear-gradient(to top, rgb(181, 39, 250) 0%, rgb(52, 210, 251) 83%, transparent 100%);;
+  --gradient: linear-gradient(164deg, rgba(52,210,251,1) 0%, rgba(181,39,250,1) 100%);
+  --gradient-vertical: linear-gradient(to top, rgb(181, 39, 250) 0%, rgb(52, 210, 251) 83%, transparent 100%);
   --content-padding: 60px 5% 60px 20%;
   --content-margin: 0 0 0 -15%;
   --image-width: 30%;
@@ -135,7 +141,7 @@ body {
 
 .section.reverse {
   flex-direction: row-reverse;
-  --gradient: linear-gradient(to right, rgb(59, 242, 156) 0%, rgb(249, 255, 71) 83%, transparent 100%);
+  --gradient: linear-gradient(36deg, rgba(249,255,71,1) 0%, rgba(59,242,156,1) 100%);
   --gradient-vertical: linear-gradient(to top, rgb(59, 242, 156) 0%, rgb(249, 255, 71) 83%, transparent 100%);
   --content-padding: 60px 20% 60px 5%;
   --content-margin: 0 -15% 0 0;
@@ -145,7 +151,7 @@ body {
   display: flex;
   min-height: 100vh;
 
-  --gradient: linear-gradient(to left, rgb(222, 44, 50) 0%, rgb(255, 110, 178) 83%, transparent 100%);
+  --gradient: linear-gradient(164deg, rgb(222, 44, 50) 0%, rgb(255, 110, 178) 100%);
   --gradient-vertical: linear-gradient(to top, rgb(222, 44, 50) 0%, rgb(255, 110, 178) 83%, transparent 100%);
   --content-padding: 60px 5% 60px 20%;
   --content-margin: 0 0 0 -15%;
@@ -160,6 +166,30 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  position: relative;
+  clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+}
+
+.section-image-container-second {
+  flex: 0 0 var(--image-width);
+  width: var(--image-width);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.section-image-container-last {
+  flex: 0 0 var(--image-width);
+  width: var(--image-width);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
 }
 
 .section-image {
@@ -173,7 +203,7 @@ body {
   color: #212121;
   margin: var(--content-margin);
   padding: var(--content-padding);
-  background: var(--gradient)
+  background: var(--gradient);
 }
 
 .section-content h2 {
