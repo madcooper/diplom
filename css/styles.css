@@ -57,18 +57,28 @@ body {
   margin-left: 1em;
 }
 
-.about {
+.nav {
   text-transform: uppercase;
   color: white;
   background: rgba(0, 0, 0, .8);
   font-weight: bold;
-  font-size: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   letter-spacing: 2px;
   height: 57px;
   margin-top: calc(55vw - 57px);
+}
+
+.nav-link {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
 }
 
 .divider {
@@ -222,6 +232,35 @@ body {
   text-align: justify;
 }
 
+.content-block {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.content-block-text {
+  flex: 0 0 50%;
+  background: rgba(96, 49, 221, .3);
+  color: white;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.content-block-text p {
+  margin-bottom: 1em;
+}
+
+.content-block-image {
+  flex: 0 0 50%;
+}
+
+.content-block-image {
+  padding-bottom: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .footer {
   background: #333;
   padding: 30px;
@@ -300,9 +339,17 @@ body {
   .section.reverse {
     /*--content-padding: 60px 30% 60px 5%;*/
   }
+
+  .content-block {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 800px) {
+  .nav-link {
+    font-size: 20px;
+  }
+
   .section {
     flex-direction: column;
 
@@ -319,7 +366,6 @@ body {
   .section-image-container-last {
     clip-path: none;
   }
-
 
   .section-image {
     width: 100%;
@@ -379,6 +425,11 @@ body {
 }
 
 @media screen and (max-width: 500px) {
+  .nav-link {
+    font-size: 16px;
+    margin: 0 10px;
+  }
+
   .section-image {
     height: 700px;
   }
@@ -389,6 +440,10 @@ body {
 
   .section h3 {
     font-size: 18px;
+  }
+
+  .content-block {
+    width: 100%;
   }
 
   .footer {
