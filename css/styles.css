@@ -222,6 +222,74 @@ body {
   text-align: justify;
 }
 
+.footer {
+  background: #333;
+  padding: 30px;
+  display: flex;
+}
+
+.footer-contact {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer-contact-title {
+  font-weight: bold;
+}
+
+.footer-contact-value {
+  color: inherit;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.footer-contact-value[href]:hover {
+  text-decoration: underline;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  margin-left: 80px;
+}
+
+.footer-nav-link {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.footer-nav-link:hover {
+  text-decoration: underline;
+}
+
+.footer-logos {
+  margin-left: auto;
+}
+
+.footer-logos-images {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.footer-logos-image {
+  height: 60px;
+  margin-left: 10px;
+}
+
+.footer-logos-info {
+  text-align: right;
+  color: white;
+}
+
+.footer-logos-info-item {
+  display: block;
+}
+
 @media screen and (max-width: 1200px) {
   .section {
     --content-width: 65%;
@@ -277,6 +345,37 @@ body {
   .section h3 {
     font-size: 22px;
   }
+
+  .footer {
+    flex-wrap: wrap;
+  }
+
+  .footer-contacts {
+    flex: 0 0 70%;
+  }
+
+  .footer-nav {
+    margin-left: 0;
+    flex: 0 0 30%;
+    text-align: right;
+  }
+
+  .footer-logos {
+    flex: 0 0 100%;
+    margin-top: 30px;
+  }
+
+  .footer-logos-images {
+    justify-content: center;
+  }
+
+  .footer-logos-image {
+    height: 40px;
+  }
+
+  .footer-logos-info {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -290,5 +389,29 @@ body {
 
   .section h3 {
     font-size: 18px;
+  }
+
+  .footer {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .footer-contact {
+    text-align: center;
+  }
+
+  .footer-nav {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .footer-nav-link {
+    margin: 0 20px;
+  }
+
+  .footer-logos {
+    margin: 0;
   }
 }
