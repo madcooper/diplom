@@ -246,6 +246,13 @@ body {
     flex-direction: column;
   }
 
+  .section-image-container,
+  .section-image-container-second,
+  .section-image-container-last {
+    clip-path: none;
+  }
+
+
   .section-image {
     width: 100%;
     height: 1000px;
