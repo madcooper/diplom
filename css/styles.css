@@ -363,15 +363,29 @@ body {
   .section {
     --content-width: 65%;
     --image-width: 50%;
-    /*--content-padding: 60px 5% 60px 30%;*/
-  }
-
-  .section.reverse {
-    /*--content-padding: 60px 30% 60px 5%;*/
   }
 
   .content-block {
     width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .content-block > *:nth-child(1) {
+     order: 2;
+   }
+
+  .content-block > *:nth-child(2) {
+    order: 1;
+  }
+
+  .content-block-text {
+    width: 100%;
+  }
+
+  .content-block-image {
+    width: 100%;
+    padding-bottom: 80%;
   }
 }
 
